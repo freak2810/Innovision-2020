@@ -13,7 +13,7 @@ html::-webkit-scrollbar {
 }
 
 .landing {
-  background-image: url(../img/bg/bg5.jpg);
+  background-image: url('../img/bg/bg5Inverted.jpg');
   min-height: 100%;
   background-color: black;
   background-position: center;
@@ -48,7 +48,6 @@ html::-webkit-scrollbar {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  
 }
 
 .event-heading {
@@ -69,14 +68,50 @@ html::-webkit-scrollbar {
   letter-spacing: unset;
 }
 
+.mousey {
+  width: 20px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  top : 90%;
+  left : 50%;
+  position : absolute;
+}
+.mousey .scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  from {
+    opacity : 1;
+    transform: translateY(4px);
+  }
+  to {
+    opacity : 0.5;
+    transform: translateY(20px);
+  }
+  }
+
 .event-names{
   background: linear-gradient(180deg, rgba(0,0,0,1) , rgba(29,94,209,0.4));
 }
+
 .event {
   color: white;
   text-align: center;
   font-family: "Trade Winds";
-  
+  font-size: 2rem;
 }
 
 .event-list {
@@ -161,6 +196,31 @@ html::-webkit-scrollbar {
   float: right;
 }
 
+.card .additional .extra span{
+  float: right;
+  font-size: 1rem;
+}
+.card .additional .register a{
+  float: left;
+  text-decoration: underline;
+  color: black;
+  font-size: 1rem;
+  animation-name:register-now;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes register-now {
+  from {
+    opacity : 1;
+  }
+  to {
+    opacity : 0.2;
+  }
+  }
+
 .card .general {
   width: 300px;
   height: 100%;
@@ -172,6 +232,7 @@ html::-webkit-scrollbar {
   padding: 1rem;
   padding-top: 0;
 }
+
 
 #event1 {
   background: linear-gradient(rgb(230, 237, 183), rgb(240, 247, 193));
@@ -213,7 +274,10 @@ html::-webkit-scrollbar {
   font-family: "Trade Winds";
   color: white;
   background: linear-gradient(0deg, rgba(0,0,0,1), rgba(29,94,209,0.4));
-  
+}
+
+.contact h1 {
+  font-size: 3rem;
 }
 
 .contact-list-container
@@ -264,19 +328,12 @@ html::-webkit-scrollbar {
 @media only screen and (max-width: 800px) {
   html,
   body {
-    max-width: 100vw;
-    max-height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
   }
-  .logo {
-    font-size: 30px;
-  }
-
-  .landing {
-    min-width: 100vw;
-    min-height: 100vh;
-  }
+  
   .event-heading {
-    width: 300px;
+    width: 700px;
     height: 200px;
   }
 
@@ -292,12 +349,19 @@ html::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 450px) {
-  html,
-  body {
+  .landing {
     min-width: 100%;
     min-height: 100%;
+    background-image: url("../img/bg/bg5Wide.jpg");
   }
 
+  .logo img {
+    height: 50px;
+  }
+  .event-heading {
+    width: 300px;
+    height: 200px;
+  }
   .event-list {
     display: flex;
     flex-direction: column;
@@ -331,9 +395,8 @@ html::-webkit-scrollbar {
   .card .additional .more-info {
     width: 220px;
     float: left;
-    position: absolute;
     left: 110px;
-    height: 100%;
+    
   }
   .card .additional .more-info h1 {
     font-size: 25px;
@@ -342,34 +405,45 @@ html::-webkit-scrollbar {
   .card .general {
     width: 250px;
   }
+  .card .general h1{
+    font-size: 25px;
+  }
 }
 
-@media only screen and (max-width: 400px) {
-  html,
-  body {
-    min-width: 100vw;
-    max-width: 100vw;
-    min-height: 100vh;
-    max-height: 100vh;
-  }
-  .landing {
-    min-width: 100%;
-    min-height: 100%;
-  }
-  .event-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
+@media only screen and (max-width: 400px){
+ 
   .card {
-    width: 340px;
-    height: 300px;
-    margin-left: 50px;
+    width: 290px;
+    height: 320px;
   }
 
   .contact-list-container
   {
-    font-size: 1em;
+    font-size: 0.9em;
   }
+
+  .card .additional .more-info h1 {
+    font-size: 25px;
+  }
+  .card .additional .more-info {
+    width: 180px;
+    left: 110px;
+  }
+  .card .additional .coords {
+    margin: 0 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+  }
+  .card .additional .extra span{
+  
+    font-size: 0.9rem;
+  }
+  .card .general {
+    width: 180px;
+    line-height: 1.15;
+  }
+  .card .general h1{
+    font-size: 25px;
+  }
+}
 }

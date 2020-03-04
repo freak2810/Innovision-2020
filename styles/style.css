@@ -1,0 +1,375 @@
+body,
+html {
+  height: 100vh;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.8em;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.landing {
+  background-image: url(../img/bg/bg5.jpg);
+  min-height: 100%;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 24px !important;
+  font-family: "Trade Winds";
+  background-attachment: fixed;
+  margin-bottom: 1%;
+  color: white;
+  margin:0;
+  padding: 0;
+  display: grid;
+  height: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
+.main-heading {
+  position: absolute;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+}
+
+.event-heading {
+  height: 400px;
+  position: relative;
+  filter: unset;
+}
+
+.heading-border {
+  margin: auto;
+  width: 40%;
+  border-color: #9e9e9e;
+}
+
+.now-open {
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: unset;
+}
+
+.event-names{
+  background: linear-gradient(180deg, rgba(0,0,0,1) , rgba(29,94,209,0.4));
+}
+.event {
+  color: white;
+  text-align: center;
+  font-family: "Trade Winds";
+  
+}
+
+.event-list {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: fit-content;
+}
+
+.card {
+  width: 450px;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: "Yeon Sung";
+  position: relative;
+  margin: 1.5rem;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card .additional .logo-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card .additional .logo-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0, 0, 0, 0.025);
+}
+
+.card .additional .logo-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-transform: translate(25%, 75%);
+}
+
+.card .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card .additional .more-info h1 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 0;
+}
+
+.card .additional .coords {
+  margin: 0 1rem;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+.card .additional .coords span + span {
+  float: right;
+}
+
+.card .general {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+#event1 {
+  background: linear-gradient(rgb(230, 237, 183), rgb(240, 247, 193));
+}
+
+#event2 {
+  background: linear-gradient(rgb(206, 225, 244), rgb(216, 235, 254));
+}
+
+#event3 {
+  background: linear-gradient(rgb(255, 237, 181), rgb(255, 247, 191));
+}
+
+#event4 {
+  background: linear-gradient(rgb(212, 232, 249), rgb(222, 242, 255));
+}
+#event5 {
+  background: linear-gradient(rgb(255, 87, 87), rgb(255, 97, 97));
+}
+#event6 {
+  background: linear-gradient(rgb(56, 43, 115), rgb(66, 53, 125));
+}
+#event7 {
+  background: linear-gradient(rgb(0, 128, 55), rgb(10, 138, 65));
+}
+#event8 {
+  background: linear-gradient(rgb(252, 146, 82), rgb(252, 146, 82));
+}
+
+
+.contact-us {
+  padding-top: 10px;
+  margin-top: 0vw;
+  min-height: fit-content;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  font-family: "Trade Winds";
+  color: white;
+  background: linear-gradient(0deg, rgba(0,0,0,1), rgba(29,94,209,0.4));
+  
+}
+
+.contact-list-container
+{
+  border: 5px solid white;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 20% 20% 20% 20%;
+  justify-content: center;
+  background-color: white;
+  font-size: 1.3em;
+  box-shadow: 0 16px 32px -16px rgba(0, 0, 0, 0.4);
+  margin-bottom: 50px;
+  margin-top: 50px;
+  color: black;
+  font-family: "Yeon Sung";
+}
+.organiser-list{
+  width: 50%;
+  text-align: center;
+  
+}
+
+.numbers-list{
+  width: 50%;
+  text-align: center;
+  
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .logo {
+    font-size: 40px;
+  }
+
+  .landing {
+    background-size: 120%;
+  }
+
+  .event-heading {
+    width: 650px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html,
+  body {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  .logo {
+    font-size: 30px;
+  }
+
+  .landing {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  .event-heading {
+    width: 300px;
+    height: 200px;
+  }
+
+  .now-open {
+    font-size: 15px;
+  }
+
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  html,
+  body {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card {
+    width: 340px;
+    height: 300px;
+    margin: 1.5rem;
+  }
+
+  .card .additional {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+  }
+
+  .card .additional .logo-card {
+    width: 100px;
+    height: 100%;
+    position: relative;
+    float: left;
+  }
+  .card .additional .logo-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    -webkit-transform: translate(30%, 150%);
+  }
+  .card .additional .more-info {
+    width: 220px;
+    float: left;
+    position: absolute;
+    left: 110px;
+    height: 100%;
+  }
+  .card .additional .more-info h1 {
+    font-size: 25px;
+  }
+
+  .card .general {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html,
+  body {
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+  .landing {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card {
+    width: 340px;
+    height: 300px;
+    margin-left: 50px;
+  }
+
+  .contact-list-container
+  {
+    font-size: 1em;
+  }
+}
